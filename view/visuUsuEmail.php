@@ -10,7 +10,7 @@ include_once("../model/usuarioModel.php");
     <label class="visually-hidden" for="inlineFormInputGroupUsername">Nome do Usuário</label>
     <div class="input-group">
       <div class="input-group-text">Nome</div>
-      <input type="text" name="nomeUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nome do Usuário">
+      <input type="text" name="emailUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nome do Usuário">
     </div>
   </div>
   <div class="col-12">
@@ -29,17 +29,17 @@ include_once("../model/usuarioModel.php");
   </thead>
   <tbody>
 <?php
-$nomeusu = isset($_POST["nomeUsu"])? $_POST["nomeUsu"] : ""; 
+$emailusu = isset($_POST["emailUsu"])? $_POST["emailUsu"] : ""; 
 
-$dado = visuUsuarioNome($conn,$nomeusu);
+$dado = visuUsuarioEmail($conn,$emailusu);
 
-foreach($dado as $nomeUsuarios):
+foreach($dado as $emailUsuarios):
 ?>
     <tr>
-      <th scope="row"><?=$nomeUsuarios["idusu"];?></th>
-      <td><?=$nomeUsuarios["nomeusu"]?></td>
-      <td><?=$nomeUsuarios["emailusu"]?></td>
-      <td><?=$nomeUsuarios["foneusu"]?></td>
+      <th scope="row"><?=$emailUsuarios["idusu"];?></th>
+      <td><?=$emailUsuarios["nomeusu"]?></td>
+      <td><?=$emailUsuarios["emailusu"]?></td>
+      <td><?=$emailUsuarios["foneusu"]?></td>
     </tr>
 <?php
 endforeach;
@@ -49,3 +49,7 @@ endforeach;
 </table>
 
 </div>
+
+<?php
+include_once("../view/footer.php");
+?>

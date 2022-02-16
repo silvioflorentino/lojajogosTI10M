@@ -7,10 +7,21 @@ function inserirUsuario($conn,$nomeusu,$emailusu,$foneusu,$cpfusu,$tipousu,$cepu
 }
 
 function visuUsuarioNome($conn,$nomeusu){
-    $query = "select * from tbusuario where nomeusu like '{$nomeusu}'";
+    $query = "select * from tbusuario where nomeusu like '%{$nomeusu}%'";
     $resultado = mysqli_query($conn, $query);
     return $resultado;  
 }
 
+function visuUsuarioEmail($conn, $emailusu){
+    $query = "select * from tbusuraio where emailusu like '%{$emailusu}%'";
+    $resultado = mysqli_query($conn, $query);
+    return $resultado; 
+}
+function visuUsuarioCodigo($conn, $codigousu){
+    $query = "select * from tbusuario where idusu = {$codigousu}";
+    $resultado = mysqli_query($conn, $query);
+    $resultado = mysqli_fetch_array($resultado);
+    return $resultado; 
+}
 
 ?>
