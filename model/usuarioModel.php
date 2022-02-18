@@ -13,7 +13,7 @@ function visuUsuarioNome($conn,$nomeusu){
 }
 
 function visuUsuarioEmail($conn, $emailusu){
-    $query = "select * from tbusuraio where emailusu like '%{$emailusu}%'";
+    $query = "select * from tbusuario where emailusu like '%{$emailusu}%'";
     $resultado = mysqli_query($conn, $query);
     return $resultado; 
 }
