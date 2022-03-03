@@ -7,7 +7,7 @@ include_once("../model/usuarioModel.php");
 <div class="centroform" >
 <form action="#" method="Post" class="row row-cols-lg-auto g-3 align-items-center">
   <div class="col-12">
-    <label class="visually-hidden" for="inlineFormInputGroupUsername">Nome do Usuário</label>
+    <label class="visually-hidden" for="inlineFormInputGroupUsername">Digite o Nome do Usuário</label>
     <div class="input-group">
       <div class="input-group-text">Nome</div>
       <input type="text" name="nomeUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nome do Usuário">

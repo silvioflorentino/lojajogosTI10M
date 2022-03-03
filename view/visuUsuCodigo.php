@@ -7,10 +7,10 @@ include_once("../model/usuarioModel.php");
 <div class="centroform" >
 <form action="#" method="Post" class="row row-cols-lg-auto g-3 align-items-center">
   <div class="col-12">
-    <label class="visually-hidden" for="inlineFormInputGroupUsername">Nome do Usuário</label>
+    <label class="visually-hidden" for="inlineFormInputGroupUsername">Código do Usuário</label>
     <div class="input-group">
-      <div class="input-group-text">Nome</div>
-      <input type="text" name="nomeUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nome do Usuário">
+      <div class="input-group-text">Código</div>
+      <input type="text" name="codUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="Digite o Código do Usuário">
     </div>
   </div>
   <div class="col-12">
@@ -29,11 +29,10 @@ include_once("../model/usuarioModel.php");
   </thead>
   <tbody>
 <?php
-$nomeusu = isset($_POST["nomeUsu"])? $_POST["nomeUsu"] : ""; 
+$codigousu = isset($_POST["codUsu"])? $_POST["codUsu"] : ""; 
+if($codigousu){
+$nomeUsuarios = visuUsuarioCodigo($conn, $codigousu);
 
-$dado = visuUsuarioNome($conn,$nomeusu);
-
-foreach($dado as $nomeUsuarios):
 ?>
     <tr>
       <th scope="row"><?=$nomeUsuarios["idusu"];?></th>
@@ -41,13 +40,11 @@ foreach($dado as $nomeUsuarios):
       <td><?=$nomeUsuarios["emailusu"]?></td>
       <td><?=$nomeUsuarios["foneusu"]?></td>
     </tr>
-<?php
-endforeach;
-?>   
-    
   </tbody>
 </table>
-
+<?php
+}
+?>
 </div>
 
 <?php

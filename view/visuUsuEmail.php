@@ -7,10 +7,10 @@ include_once("../model/usuarioModel.php");
 <div class="centroform" >
 <form action="#" method="Post" class="row row-cols-lg-auto g-3 align-items-center">
   <div class="col-12">
-    <label class="visually-hidden" for="inlineFormInputGroupUsername">Nome do Usuário</label>
+    <label class="visually-hidden" for="inlineFormInputGroupUsername">Digite o E-mail do Usuário</label>
     <div class="input-group">
       <div class="input-group-text">Nome</div>
-      <input type="text" name="emailUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="Nome do Usuário">
+      <input type="text" name="emailUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="Digite o E-mail do Usuário">
     </div>
   </div>
   <div class="col-12">
