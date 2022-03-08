@@ -23,5 +23,17 @@ function visuUsuarioCodigo($conn, $codigousu){
     $resultado = mysqli_fetch_array($resultado);
     return $resultado; 
 }
-
+function alterarUsuario($conn,$codigousu,$nomeusu,$emailusu,$foneusu,$cpfusu,$tipousu,$cepusu,$numusu,$compleusu){
+    $query = "update tbusuario set 
+    nomeusu='{$nomeusu}', 
+    emailusu='{$emailusu}', 
+    foneusu = '{$foneusu}',
+    tipousu = '{$tipousu}',
+    cpfusu='{$cpfusu}',
+    cepusu='{$cepusu}',
+    numusu='{$numusu}',
+    compleusu='{$compleusu}' where idusu = '{$codigousu}'";
+    $resultado = mysqli_query($conn, $query);
+    return $resultado;
+}
 ?>
