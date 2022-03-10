@@ -4,21 +4,21 @@ include_once("../model/conexao.php");
 include_once("../model/usuarioModel.php");
 ?>
 
-<div class="centroform" >
-<form action="#" method="Post" class="row row-cols-lg-auto g-3 align-items-center">
-  <div class="col-12">
+<div class="container mt-5" >
+<form action="#" method="Post" class="row row-cols-auto   justify-content-lg-center g-3 align-items-center">
+  <div class="col-8">
     <label class="visually-hidden" for="inlineFormInputGroupUsername">Digite o E-mail do Usuário</label>
     <div class="input-group">
-      <div class="input-group-text">Nome</div>
+      <div class="input-group-text">E-mail</div>
       <input type="text" name="emailUsu" class="form-control" id="inlineFormInputGroupUsername" placeholder="Digite o E-mail do Usuário">
     </div>
   </div>
-  <div class="col-12">
+  <div class="col-2">
     <button type="submit" class="btn btn-primary">Pesquisar</button>
   </div>
 </form>
 
-<table class="table">
+<table class="table mt-5">
   <thead>
     <tr>
       <th scope="col">Código</th>

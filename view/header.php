@@ -33,7 +33,7 @@
                             </li>
   
                             <li><a class="dropdown-item" href="../view/visuUsuCodigo.php">Pesquisar por Código</a></li>
-                            <li><a class="dropdown-item" href="../view/visuUsuEmail.php">Pesquisar por Nome</a></li>
+                            <li><a class="dropdown-item" href="../view/visuUsuNome.php">Pesquisar por Nome</a></li>
                             <li><a class="dropdown-item" href="../view/visuUsuEmail.php">Pesquisar por E-mail</a></li>
 
                         </ul>
