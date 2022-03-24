@@ -7,3 +7,19 @@
     margin-left: 35%;
     width: 400px;
 }
+#formlogin{
+    width: 400px;
+    background-color: rgb(218, 230, 230);
+    border-radius: 25px;
+    padding: 1%;
+}
+html,body {
+    height: 100%;
+   }
+.containerlogin{
+    height: 100%;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,3 +1,6 @@
+<?php
+include_once("../model/usuarioModel.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -43,21 +46,19 @@
                             Jogos
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Cadastrar</a></li>
+                            <li><a class="dropdown-item" href="../view/cadastroJogo.php">Cadastrar</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Pesquisar por Gênero</a></li>
-                            <li><a class="dropdown-item" href="#">Pesquisar por Código</a></li>
-                            <li><a class="dropdown-item" href="#">Pesquisar por Nome</a></li>
-                            <li><a class="dropdown-item" href="#">Pesquisar por Plataforma</a></li>
+                            <li><a class="dropdown-item" href="../view/visuJogoGenero.php">Pesquisar por Gênero</a></li>
+                            <li><a class="dropdown-item" href="../view/visuJogoCod.php">Pesquisar por Código</a></li>
+                            <li><a class="dropdown-item" href="../view/visuJogoNome.php">Pesquisar por Nome</a></li>
+                            
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Digite aqui!" aria-label="Search">
-                    <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
-                </form>
+  <ul>Olá, <?php echo($_SESSION["nome"]);?> </ul>
+  <ul><a class="btn btn-danger" href="../controler/logout.php"> Sair</a></ul>
             </div>
         </div>
     </nav>
