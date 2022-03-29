@@ -1,5 +1,6 @@
 <?php
 include_once("../model/usuarioModel.php");
+usarAcesso();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

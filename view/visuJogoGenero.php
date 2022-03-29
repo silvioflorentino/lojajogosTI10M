@@ -7,18 +7,18 @@ usarAcesso();
 ?>
 
 
-<div class="centroform">
+<div class="container mt-5">
 
-  <form action="#" method="Post" class="row row-cols-lg-auto g-3 align-items-center">
-    <div class="col-12">
-      <label class="visually-hidden" for="inlineFormInputGroupUsername">Genero do jogo</label>
+  <form action="#" method="Post" class="row row-cols-auto   justify-content-lg-center g-3 align-items-center">
+    <div class="col-8">
+      <label class="visually-hidden" for="inlineFormInputGroupUsername">Gênero do jogo</label>
       <div class="input-group">
-        <div class="input-group-text">Genero</div>
+        <div class="input-group-text">Gênero</div>
         <input type="text" name="generoJogo" class="form-control" id="inlineFormInputGroupUsername" placeholder="Genero do jogo">
       </div>
     </div>
 
-    <div class="col-12">
+    <div class="col-2">
       <button type="submit" class="btn btn-primary">Pesquisar</button>
     </div>
   </form>
@@ -28,10 +28,10 @@ usarAcesso();
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">codigo</th>
+        <th scope="col">Código</th>
         <th scope="col">Nome</th>
         <th scope="col">Valor</th>
-        <th scope="col">Genero</th>
+        <th scope="col">Gênero</th>
         <th scope="col">Capa</th>
         <th scope="col">Alterar</th>
         <th scope="col">Excluir</th>
