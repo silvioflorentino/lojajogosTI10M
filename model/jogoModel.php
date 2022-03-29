@@ -1,22 +1,14 @@
 <?php 
-
-function inserirJogos($conn,$nomejogo,$valorjogo,$generojogo,$qtdjogo,$datalancamentojogo,$studiojogo) {
-
-
-
-$query = "INSERT INTO `tbjogos` (`idjogo`, `nomejogo`, `valorjogo`, `generojogo`, `qtdjogo`, `datalancamentojogo`, `studiojogo`) VALUES (NULL,'{$nomejogo}','{$valorjogo}','{$generojogo}','{$qtdjogo}','{$datalancamentojogo}','{$studiojogo}')";
-
-
+function inserirJogos($conn,$nomejogo,$valorjogo,$generojogo,$qtdjogo,$datalancamentojogo,$studiojogo,$capajogo) {
+$query = "INSERT INTO `tbjogos` (`idjogo`, `nomejogo`, `valorjogo`, `generojogo`, `qtdjogo`, `datalancamentojogo`, `studiojogo`,`imgjogo`) VALUES (NULL,'{$nomejogo}','{$valorjogo}','{$generojogo}','{$qtdjogo}','{$datalancamentojogo}','{$studiojogo}', '{$capajogo}')";
 $dados = mysqli_query($conn,$query);
 return $dados; 
-
 };
 
 function visuJogoNome($conn,$nomejogo){
     $query = "select * from tbjogos where nomejogo like '%{$nomejogo}%'";
     $resultado = mysqli_query($conn, $query);
     return $resultado;
-     
 };
 
 function visuJogoGenero($conn, $generojogo){
@@ -34,7 +26,6 @@ function visuJogoCodigo($conn, $codigojogo){
 
 function alterarJogo($conn,$codigojogo,$nomejogo,$valorjogo,$generojogo,$qtdjogo,$datalancamentojogo,$studiojogo){
     $query = "update tbjogos set nomejogo='{$nomejogo}', valorjogo='{$valorjogo}', generojogo='{$generojogo}', qtdjogo='{$qtdjogo}', datalancamentojogo='{$datalancamentojogo}', studiojogo='{$studiojogo}' where idjogo = '{$codigojogo}'";
-
     $resultado = mysqli_query($conn, $query);
     return $resultado;
 };
