@@ -4,7 +4,7 @@ include_once("header.php");
 
 <div class="container">
 
-<form class="row g-3" action="../controler/inserirCadastroJogo.php" method="Get">
+<form class="row g-3" action="../controler/inserirCadastroJogo.php" method="post" enctype="multipart/form-data">
   <div class="col-md-6">
     <label for="inputJogo" class="form-label">Nome do Jogo</label>
     <input type="text" name="nomejogo" class="form-control" id="inputJogo" placeholder="XXXXXXXXXX" required>
@@ -38,8 +38,8 @@ include_once("header.php");
   </div>
  
   <div class="col-4">
-    <label for="inputstudio" class="form-label">Capa Principal</label>
-    <input type="text" name="capajogo" class="form-control" id="inputstudio" placeholder="XXXXXXXXX" required>
+    <label for="inputstudio" class="form-label">Selecione uma capa Principal</label>
+    <input type="file" name="capajogo" class="form-control" id="inputstudio" placeholder="XXXXXXXXX" required>
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Criar</button>
