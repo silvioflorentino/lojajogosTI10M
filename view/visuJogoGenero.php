@@ -31,8 +31,8 @@ usarAcesso();
         <th scope="col">codigo</th>
         <th scope="col">Nome</th>
         <th scope="col">Valor</th>
-        <th scope="col">Quantidade</th>
         <th scope="col">Genero</th>
+        <th scope="col">Capa</th>
         <th scope="col">Alterar</th>
         <th scope="col">Excluir</th>
       </tr>
@@ -51,8 +51,8 @@ usarAcesso();
             <th scope="row"><?= $generoJogo["idjogo"] ?></th>
             <td><?= $generoJogo["nomejogo"] ?></td>
             <td><?= $generoJogo["valorjogo"] ?></td>
-            <td><?= $generoJogo["qtdjogo"] ?></td>
             <td><?= $generoJogo["generojogo"] ?></td>
+            <td><img width="50" height="50" src="<?= $generoJogo["imgjogo"] ?>"></td>
             <td>
               <form action="../view/alterarFormJogo.php" method="post">
 

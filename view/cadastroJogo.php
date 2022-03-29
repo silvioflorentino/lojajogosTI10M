@@ -37,13 +37,9 @@ include_once("header.php");
     <input type="text" name="studiojogo" class="form-control" id="inputstudio" placeholder="XXXXXXXXX" required>
   </div>
  
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Aceita-se os termo de uso do sistema de jogos
-      </label>
-    </div>
+  <div class="col-4">
+    <label for="inputstudio" class="form-label">Capa Principal</label>
+    <input type="text" name="capajogo" class="form-control" id="inputstudio" placeholder="XXXXXXXXX" required>
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Criar</button>
